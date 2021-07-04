@@ -39,17 +39,16 @@ export const Widget = () => {
             document.querySelector('.open-button').style.display = "none";
 
             alert("Sucessfully uploaded!");
-            document.querySelector('.alert').style.display = 'block'; 
+            
             
             }
         
         else{
-            if(!input.value)
-                message.innerHTML = "Please upload your image first."
-            else{
-                message.innerHTML = "Please upload image of size upto 5MB."
-                return;
-            }
+            if(input.value){
+            message.innerHTML = "File size exceeded 5MB."
+            return;
+        }
+            
             
         }
 
@@ -78,7 +77,7 @@ export const Widget = () => {
                     <p><span id="message"></span></p>
 
                     <img src="images/Demo.jpg" alt="Demo" height="130px" width="210px" id="demo-img" />
-                    <button type="button" className="btn submit" onClick='#' >Submit</button>
+                    <button type="button" className="btn submit" onClick={submit} >Submit</button>
                    
                     <p><small>This information is used for identification only, and will be kept secure.</small></p>
                 </form>

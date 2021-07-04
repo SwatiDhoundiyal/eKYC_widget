@@ -55,7 +55,7 @@ export const Header = () => {
             <p>
               Authenticate yourself and make your data more secure and credible.
             </p>
-            <a href="#">
+            <a to="#">
               Learn More
             </a>
           </div>
